@@ -12,3 +12,11 @@ jadi nanti di api tinggal memanggil product nya
 
 ## payment
 proses pembayaran menggunakan midtrans, dan callback nya menggunakan ngrok
+
+## Dokumentasi API
+
+Dokumentasi:
+
+```
+https://documenter.getpostman.com/view/24453249/2sB3QFQC6p
+```
