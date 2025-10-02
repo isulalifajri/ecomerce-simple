@@ -7,6 +7,26 @@ use Illuminate\Http\Request;
 
 class AuthenticationController extends Controller
 {
+
+    /**
+     * @OA\Post(
+     *     path="/api/register",
+     *     tags={"Authentication"},
+     *     summary="Register user baru",
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"name","email","password","password_confirmation"},
+     *             @OA\Property(property="name", type="string", example="Budi"),
+     *             @OA\Property(property="email", type="string", example="budi@mail.com"),
+     *             @OA\Property(property="password", type="string", example="secret123"),
+     *             @OA\Property(property="password_confirmation", type="string", example="secret123"),
+     *         ),
+     *     ),
+     *     @OA\Response(response=200, description="Berhasil register"),
+     *     @OA\Response(response=422, description="Validasi gagal"),
+     * )
+     */
     public function register(Request $request)
     {
         $validatedData = $request->validate([
