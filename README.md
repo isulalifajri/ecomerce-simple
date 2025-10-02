@@ -129,6 +129,14 @@ di controller.php tambahkan code ini:
  *     url="http://127.0.0.1:9090",
  *     description="Localhost API server"
  * )
+ *
+ * @OA\SecurityScheme(
+ *     securityScheme="bearerAuth",
+ *     type="http",
+ *     scheme="bearer",
+ *     bearerFormat="JWT",
+ *     description="Masukkan token hasil login: Bearer {token}"
+ * )
  */
 
  note: `sesuaikan url nya`
@@ -162,3 +170,5 @@ kemudian contoh pada function register tambahkan code ini:
 ```
 
 Setiap kali update anotase/kode swagger, jalankan ini: `php artisan l5-swagger:generate`
+
+jika ingin hasil request nya mau lebih clean,, gunakan `try catch` di setiap function nya
